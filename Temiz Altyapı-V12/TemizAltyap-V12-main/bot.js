@@ -5,9 +5,10 @@ const moment = require('moment');
 const ayarlar = require('./ayarlar.json');
 const os = require('os');
 //https://discord.gg/AhYJewwVQ5
-const {JsonDatabase,YamlDatabase} = require("wio.db");
-const db = new JsonDatabase("myDatabase");
-const yamldb = new YamlDatabase("myDatabase");
+const { JsonDatabase, YamlDatabase} = require("wio.db");
+const db = new JsonDatabase({
+  databasePath:"./databases/myJsonDatabase.json"
+});
 require('./util/eventLoader')(client);
 //https://discord.gg/zSWWKGMxzG
 client.ayarlar = ayarlar;
