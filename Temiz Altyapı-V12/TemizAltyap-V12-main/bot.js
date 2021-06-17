@@ -80,19 +80,9 @@ client.unload = command => {
   });
 };
 //https://discord.gg/AhYJewwVQ5
-client.on('ready', () => {
+    client.on('ready', () => {
 
-  
-  var actvs = [
-    `MADE BY 'TheGhost `,
-    `Prefix : ${prefix} `
-
-];
-
-client.user.setActivity(actvs[Math.floor(Math.random() * (actvs.length - 1) + 1)], { type: 'WATCHİNG' });
-setInterval(() => {
-    client.user.setActivity(actvs[Math.floor(Math.random() * (actvs.length - 1) + 1)], { type: 'WATCHİNG'});
-}, 3500);
+    client.user.setPresence({ activity: { name: ' Made BY TheGhost ' }})
       //'TheGhost#0602
       console.log ('_________________________________________');
       console.log (`Kullanıcı İsmi     : ${client.user.username}`);
